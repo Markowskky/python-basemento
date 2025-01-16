@@ -8,14 +8,15 @@ l22 = s2.split(' ')
 
 l1 = list(map(int, l11))
 l2 = list(map(int, l22))
-l3 =
+
+counter = 0
 
 print(s1)
 print(s2)
 for n1 in l1:
     is_div = False;
     j = 0;
-    while (not is_div) and (j < 12.len(l2)):
+    while (not is_div) and (j < len(l2)):
         n2 = l2[j]
         if n2 % n1 == 0:
             is_div = True;
