@@ -1,4 +1,4 @@
-file = open('liczby_przyklad.txt', 'r')
+file = open('liczby.txt', 'r')
 
 s1 = file.readline()
 l11 = s1.split(' ')
