@@ -1,0 +1,39 @@
+import random, sys, time
+
+n = 10000000
+maxint = sys.maxsize
+l = []
+
+# Generowanie
+start_rand = time.time()
+for _ in range(n):
+    l.append(random.randint(-maxint - 1, maxint))
+stop_rand = time.time()
+
+# Sortowanie
+start_sort = time.time()
+l.sort()
+end_sort = time.time()
+
+
+x = 41
+jest = False
+i = 0
+
+start_szuka = time.time()
+while i < len(l):
+    if l[i] == x:
+        jest = True
+    break
+    i += 1
+end_szuka = time.time()
+
+print(f"Liczby:", l[:n])
+print(f"Czas generowania: {stop_rand - start_rand:.4f} sek.")
+print(f"Czas sortowania: {end_sort - start_sort:.4f} sek.")
+print(f"Czas szukania liniowego: {end_szuka - start_szuka:.4f} sek.")
+
+if jest:
+    print(f"Liczba {x} jest {i}")
+else:
+    print(f"liczba {x} nie ma")
